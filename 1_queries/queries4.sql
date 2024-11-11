@@ -1,0 +1,1 @@
+select name, email, id, cohort_id from student where email not like '%gmail%' and phone is null;
