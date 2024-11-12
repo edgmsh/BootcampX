@@ -20,4 +20,4 @@ CREATE TABLE assistance_request (
 
 ALTER TABLE assistance_request ADD FOREIGN KEY(assignment_id) REFERENCES assignments(id);
 ALTER TABLE assistance_request ADD FOREIGN KEY(student_id) REFERENCES student(id);
-ALTER TABLE assistance_request ADD FOREIGN KEY(teacher_id) REFERENCES teacher(id);
+-- ALTER TABLE assistance_request ADD FOREIGN KEY(teacher_id) REFERENCES teacher(id);
