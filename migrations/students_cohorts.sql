@@ -1,11 +1,11 @@
-CREATE TABLE cohort (
+CREATE TABLE cohorts (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50),
   start_date DATE,
   end_date DATE
 );
 
-CREATE TABLE student (
+CREATE TABLE students (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50),
   email VARCHAR(50),
@@ -16,4 +16,4 @@ CREATE TABLE student (
   cohort_id INT
 );
 
-ALTER TABLE student ADD FOREIGN KEY(cohort_id) REFERENCES cohort(id);
+ALTER TABLE students ADD FOREIGN KEY(cohort_id) REFERENCES cohorts(id);

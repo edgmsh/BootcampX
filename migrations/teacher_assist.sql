@@ -1,4 +1,4 @@
-CREATE TABLE teacher (
+CREATE TABLE teachers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50),
   start_date DATE,
@@ -6,7 +6,7 @@ CREATE TABLE teacher (
   is_active BOOLEAN
 );
 
-CREATE TABLE assistance_request (
+CREATE TABLE assistance_requests (
   id SERIAL PRIMARY KEY,
   assignment_id INT,
   student_id int,
@@ -18,6 +18,6 @@ CREATE TABLE assistance_request (
   teacher_feedback VARCHAR(5000)
 );
 
-ALTER TABLE assistance_request ADD FOREIGN KEY(assignment_id) REFERENCES assignments(id);
-ALTER TABLE assistance_request ADD FOREIGN KEY(student_id) REFERENCES student(id);
+ALTER TABLE assistance_requests ADD FOREIGN KEY(assignment_id) REFERENCES assignments(id);
+ALTER TABLE assistance_requests ADD FOREIGN KEY(student_id) REFERENCES students(id);
 -- ALTER TABLE assistance_request ADD FOREIGN KEY(teacher_id) REFERENCES teacher(id);
